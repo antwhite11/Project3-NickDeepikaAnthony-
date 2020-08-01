@@ -3,6 +3,7 @@ module.exports = function (sequelize, DataTypes){
     var Product = sequelize.define("Product", {
         productId: {
             type: DataTypes.INTEGER,
+            autoIncrement: true,
             primaryKey: true
           },
         productName: {
@@ -10,7 +11,7 @@ module.exports = function (sequelize, DataTypes){
             allowNull: false
         },
         description: {
-            type: DataTypes.TINYTEXT,
+            type: DataTypes.STRING,
             allowNull: false
         },
         price: {
