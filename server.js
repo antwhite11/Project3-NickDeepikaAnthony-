@@ -15,6 +15,7 @@ app.use(express.static("public"));
 //   }
 
 require("./routes/api-product")(app);
+require("./routes/api-order")(app)
 
 //Model has been setup
 db.sequelize.sync({ force: true }).then(function() {
