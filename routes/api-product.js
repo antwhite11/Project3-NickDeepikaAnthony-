@@ -15,7 +15,28 @@ module.exports = function (app) {
             res.json(dbProducts)
         })
     });
-   
+
+    app.get("/api/products/sortbyprice", function(req, res){
+        if (req.query.sort=== 'DESC') {
+            db.Product.findAll({
+             order: [
+                 ['price', 'DESC']
+             ]
+            }).then(function(dbProduct){
+                res.json(dbProduct)
+            }) 
+        }
+        else{
+            db.Product.findAll({
+                order: [
+                    ['price', 'ASC']
+                ]
+               }).then(function(dbProduct){
+                   res.json(dbProduct)
+               }) 
+        }
+
+    })
     app.get("/api/products/:id", function(req,res) {
         db.Product.findOne({
             where: {
