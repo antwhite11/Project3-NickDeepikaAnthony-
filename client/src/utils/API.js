@@ -21,6 +21,12 @@ export default {
     getOrderHistory: function(id){
 
         return axios.get("/api/orders/" + id + "/orderhistory")
+    },
+
+    getUserFirstName: function(){
+
+        return axios.get("")
+
     }
 
 }
