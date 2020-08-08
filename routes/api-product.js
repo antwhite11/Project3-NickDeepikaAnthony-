@@ -1,4 +1,6 @@
 const db = require("../models");
+const { sequelize } = require("../models");
+const { Op } = require("sequelize");
 
 module.exports = function (app) {
     app.get("/api/products", function (req, res) { 
@@ -9,7 +11,10 @@ module.exports = function (app) {
     app.get("/api/products/searchbyname", function (req, res){
         db.Product.findAll({
             where:{
-                productName: req.query.searchterm
+                productName:
+                {
+                    [Op.like]: req.query.searchterm + '%'
+                } 
             }
         }).then(function(dbProducts){
             res.json(dbProducts)

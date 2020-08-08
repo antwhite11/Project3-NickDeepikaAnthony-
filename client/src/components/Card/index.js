@@ -5,7 +5,7 @@ function Card(props) {
     
       <div className="card">
         <div className="img-container">
-          <img class="card-img-top" src={props.product.imageURL} alt="Card image cap"></img>
+          <img className="card-img-top" src={props.product.imageURL} alt="Card image cap"></img>
         </div>
         <div className="content">
           <ul>
