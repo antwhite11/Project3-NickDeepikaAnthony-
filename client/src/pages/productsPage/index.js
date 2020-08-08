@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Col, Row, Container } from "../../components/Grid"
 import ProductList from "../../components/ProductList"
+import Navbar from "../../components/Navbar"
 import API from "../../utils/API";
 
 const productsPage = () => {
@@ -18,13 +19,13 @@ const productsPage = () => {
     <Container fluid>
       <Row>
         <Col size="md-12">
-          <div class="card-deck">
+          <Navbar/>
+          <div class="card-columns">
           <ProductList products={products} />
           </div>
         </Col>
       </Row>
     </Container> 
-    
     )
 }
 
