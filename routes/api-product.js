@@ -7,7 +7,7 @@ module.exports = function (app) {
         })
     });
     app.get("/api/products/searchbyname", function (req, res){
-        db.Product.findOne({
+        db.Product.findAll({
             where:{
                 productName: req.query.searchterm
             }
