@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Col, Row, Container } from "../../components/Grid"
+import { Link } from 'react-router-dom'
 import ProductList from "../../components/ProductList"
 import API from "../../utils/API";
 import SearchForm from "../../components/SearchForm"
 import Sort from "../../components/Sort"
-// import Search from "../../components/Search"
+// import SearchIcon from '@material-ui/icon/Search'
+// import ShoppingCartIcon from '@material-ui/icon/ShoppingCart';
+// import Cart from "../../components/Cart";
+import MaterialIcon, {colorPalette} from 'material-icons-react';
+
 
 const productsPage = () => {
   const [products, setProducts] = useState([]);
@@ -56,18 +61,26 @@ const productsPage = () => {
     <Container fluid>
       <Row>
         <Col size="md-12">
-          <nav className="navbar navbar-light justify-content-center mt-4">
-            <form className="form-inline">
+          <nav className="navbar mt-4">
+            <form className="form-inline"> 
               <Sort onClick={() => sortbyPrice("DESC")}></Sort>
               <SearchForm
                 handleInputChange={handleInputChange}
                 results={search}
               />
-            </form>
-          </nav>
+               <Link to="/cart"><MaterialIcon icon="shopping_cart" color='#212121' size='large' /></Link>
+            </form>          
+           </nav>
+           <div className="container">
+            <div className="row" id="Products">
+            <div className="project-area col-12 d-flex justify-content-center">
           <div className="card-columns">
             <ProductList products={products} />
           </div>
+          </div>
+            </div>
+            </div>
+           
         </Col>
       </Row>
     </Container>
