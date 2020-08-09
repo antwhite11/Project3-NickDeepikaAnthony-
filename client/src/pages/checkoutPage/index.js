@@ -1,6 +1,7 @@
 import React from "react"
 import OrderDisplay from "../../components/orderDisplay/index"
 import CheckoutButton from "../../components/CheckoutButton"
+import TotalCard from "../../components/TotalCard/index"
 
 const checkOutpage = () => {
 
@@ -11,12 +12,16 @@ const checkOutpage = () => {
         }
     
 
+ 
+
     return (
   
     <div>
     <header style={headerStyle}>Checkout!</header>
     <OrderDisplay></OrderDisplay>
+    <TotalCard></TotalCard>
     <CheckoutButton></CheckoutButton>
+    
     
     
     </div>
