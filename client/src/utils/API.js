@@ -23,10 +23,6 @@ export default {
         return axios.get("/api/orders/" + id + "/orderhistory")
     },
 
-    getUserFirstName: function(){
-
-        return axios.get("")
-
-    }
+    
 
 }

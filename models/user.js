@@ -31,6 +31,11 @@ module.exports = function (sequelize, DataTypes) {
         type: DataTypes.STRING,
         allowNull: false,
         unique: false
+      },
+
+      shipping:{
+        type: DataTypes.STRING,
+        allowNull: false
       }
     });
     return User;
