@@ -1,6 +1,19 @@
 import React from "react";
+import { useStoreContext } from "../../utils/GlobalState";
+import { ADD_TO_CART } from "../../utils/actions";
 
 function Card(props) {
+  
+  const [state, dispatch] = useStoreContext();
+  const addToCart = () => {
+  //  console.log(state.cartProducts)
+    dispatch({
+      type: ADD_TO_CART,
+      product: props.product
+    });
+  };
+
+
   return (
 
     <div className="card">
@@ -14,7 +27,7 @@ function Card(props) {
         <p><strong>Description:</strong> {props.product.description}</p>
         <p><strong>Price:</strong> ${props.product.price}</p>
         <p><strong>Catogery:</strong> {props.product.catogery}</p>
-        <p><i className="material-icons" color='#212121' size='medium'>add_shopping_cart </i></p>
+        <p><button className="material-icons" color='#212121' size='medium' onClick={addToCart}>add_shopping_cart </button></p>
      
     </div>
 

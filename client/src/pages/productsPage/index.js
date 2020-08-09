@@ -9,28 +9,32 @@ import Sort from "../../components/Sort"
 // import ShoppingCartIcon from '@material-ui/icon/ShoppingCart';
 // import Cart from "../../components/Cart";
 import MaterialIcon, { colorPalette } from 'material-icons-react';
+import { UPDATE_PRODUCTS } from "../../utils/actions";
+import { useStoreContext } from "../../utils/GlobalState";
 
 
 const productsPage = () => {
-  const [products, setProducts] = useState([]);
+  const [state, dispatch] = useStoreContext();
   const [search, setSearch] = useState("");
-
 
   function getProducts() {
     API.getProducts()
       .then(res => {
-        console.log("get products")
-        console.log(res.data)
-        setProducts(res.data)
+        dispatch({
+          type: UPDATE_PRODUCTS,
+          products: res.data
+        });
       })
   }
 
   const sortbyPrice = sort => {
-    console.log("sort by price")
     API.sortProducts(sort)
       .then(res => {
         console.log(res.data)
-        setProducts(res.data)
+        dispatch({
+          type: UPDATE_PRODUCTS,
+          products: res.data
+        });
       })
   };
 
@@ -49,7 +53,10 @@ const productsPage = () => {
   const searchProduct = search => {
     API.getProduct(search)
       .then(res => {
-        setProducts(res.data)
+        dispatch({
+          type: UPDATE_PRODUCTS,
+          products: res.data
+        });
       })
   }
 
@@ -84,7 +91,9 @@ const productsPage = () => {
         <div className="row" id="Products">
           <div className="project-area col-12 d-flex justify-content-center">
             <div className="card-columns">
-              <ProductList products={products} />
+            {console.log("here")};
+              {console.log(state.products)};
+              <ProductList products={state.products} />
             </div>
           </div>
         </div>

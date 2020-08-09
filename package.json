@@ -26,8 +26,10 @@
     "express": "^4.16.3",
     "material-icons-react": "^1.0.4",
     "mysql2": "^1.6.4",
+    "react-redux": "^7.2.1",
     "react-router-dom": "^4.3.1",
     "react-shopping-cart": "^1.9.3",
+    "redux": "^4.0.5",
     "sequelize": "^4.41.2"
   }
 }
