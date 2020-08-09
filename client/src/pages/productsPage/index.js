@@ -8,7 +8,7 @@ import Sort from "../../components/Sort"
 // import SearchIcon from '@material-ui/icon/Search'
 // import ShoppingCartIcon from '@material-ui/icon/ShoppingCart';
 // import Cart from "../../components/Cart";
-import MaterialIcon, {colorPalette} from 'material-icons-react';
+import MaterialIcon, { colorPalette } from 'material-icons-react';
 
 
 const productsPage = () => {
@@ -61,28 +61,36 @@ const productsPage = () => {
     <Container fluid>
       <Row>
         <Col size="md-12">
-          <nav className="navbar mt-4">
-            <form className="form-inline"> 
-              <Sort onClick={() => sortbyPrice("DESC")}></Sort>
-              <SearchForm
-                handleInputChange={handleInputChange}
-                results={search}
-              />
-               <Link to="/cart"><MaterialIcon icon="shopping_cart" color='#212121' size='large' /></Link>
-            </form>          
-           </nav>
-           <div className="container">
-            <div className="row" id="Products">
-            <div className="project-area col-12 d-flex justify-content-center">
-          <div className="card-columns">
-            <ProductList products={products} />
-          </div>
-          </div>
-            </div>
-            </div>
-           
+          <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a className="navbar-brand" href="#">Shopping</a>
+            <button className="navbar-toggler" type="button" data-toggle="collapse"
+              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <Sort onClick={() => sortbyPrice("DESC")}></Sort>
+            <SearchForm
+              handleInputChange={handleInputChange}
+              results={search}
+            />
+            <Link to="/cart"><MaterialIcon icon="shopping_cart" color='#212121' size='large' /></Link>
+
+          </nav>
         </Col>
       </Row>
+
+      <div className="container">
+        <div className="row" id="Products">
+          <div className="project-area col-12 d-flex justify-content-center">
+            <div className="card-columns">
+              <ProductList products={products} />
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </Container>
   )
 }
