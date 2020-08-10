@@ -6,7 +6,7 @@ function Card(props) {
   
   const [state, dispatch] = useStoreContext();
   const addToCart = () => {
-  //  console.log(state.cartProducts)
+  console.log(state.cartProducts)
     dispatch({
       type: ADD_TO_CART,
       product: props.product

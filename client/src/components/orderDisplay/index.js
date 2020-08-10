@@ -1,6 +1,9 @@
 import React from "react";
 import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_ITEM } from "../../utils/actions";
+import { ADD_TO_CART } from "../../utils/actions";
+
+
 
 
 
@@ -16,7 +19,7 @@ function OrderDisplay(props) {
 
  {dispatch({
     type: REMOVE_ITEM,
-    id: props.products.productid
+    id: props.products.productId
   })
 }}
 
@@ -43,9 +46,10 @@ function OrderDisplay(props) {
           <div class='col-sm-9 card'>
           <div class="row">
             <div class="col-sm-3">
+              
 
 
-            <img src={props.products.image} alt="item pic" style={imageStyle}/>
+            <img src={props.products.imageURL} alt="item pic" style={imageStyle}/>
 
 
 

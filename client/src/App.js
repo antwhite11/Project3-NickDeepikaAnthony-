@@ -13,7 +13,7 @@ function App(){
             <StoreProvider>
             
                    <Route exact path="/productsPage" component={productsPage}/>
-                   <Route exact path="/checkoutPage" component={checkOutpage}/>
+                   <Route exact path="/cart" component={checkOutpage}/>
                    <Route exact path="/orderSubmitted" component= {orderSubmitted}/>
              
             </StoreProvider>

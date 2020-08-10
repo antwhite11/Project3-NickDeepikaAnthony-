@@ -28,8 +28,9 @@ const checkOutpage = () => {
     <div>
     <header style={headerStyle}>Checkout!</header>
     {console.log("here")}
-    {console.log(state.products)}
-    <OrderDisplay products={state.products} />
+    {console.log(state.cartProducts[1])}
+    {console.log("cart")}
+    <OrderDisplay products={state.cartProducts[1]} />
     <ShippingCard></ShippingCard>
 
     <TotalCard></TotalCard>
