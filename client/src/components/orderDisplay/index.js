@@ -1,4 +1,6 @@
 import React from "react";
+import { useStoreContext } from "../../utils/GlobalState";
+import { REMOVE_ITEM } from "../../utils/actions";
 
 
 
@@ -6,6 +8,17 @@ import React from "react";
 
 
 function OrderDisplay(props) {
+  
+  const[state,dispatch]= useStoreContext();
+
+  const removeFromCart=()=>{
+  
+
+ {dispatch({
+    type: REMOVE_ITEM,
+    id: props.products.productid
+  })
+}}
 
 
   var imageStyle = {
@@ -32,7 +45,7 @@ function OrderDisplay(props) {
             <div class="col-sm-3">
 
 
-            <img src="https://img10.joybuy.com/N0/s560x560_jfs/t1/63260/33/5419/264052/5d3999f9E0caf583f/2593c109381a9816.jpg.dpg" alt="item pic" style={imageStyle}/>
+            <img src={props.products.image} alt="item pic" style={imageStyle}/>
 
 
 
@@ -42,15 +55,16 @@ function OrderDisplay(props) {
 
             <div class="col-sm-6">
 
-            <strong>ITEM NAME</strong>
-            <div><strong>QTY</strong></div>
+            <strong>{props.products.productName}</strong>
+            <button onClick={removeFromCart}>console</button>
+            
 
 
             </div>
 
             <div class="col-sm-3">
 
-            <strong>Sub-Total: $100</strong>
+            <strong>{props.products.price}</strong>
 
 
             </div>
@@ -80,6 +94,6 @@ function OrderDisplay(props) {
 
     </div>
   );
-}
+  }
 
 export default OrderDisplay ;
