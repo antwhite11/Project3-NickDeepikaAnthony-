@@ -22,6 +22,7 @@ function OrderDisplay(props) {
 
 
 
+
   return (
     <div>
       <div class="container">
@@ -49,7 +50,7 @@ function OrderDisplay(props) {
 
             <div class="col-sm-3">
 
-            <strong>$100.00</strong>
+            <strong>Sub-Total: $100</strong>
 
 
             </div>
