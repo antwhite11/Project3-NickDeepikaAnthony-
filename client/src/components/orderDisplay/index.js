@@ -2,6 +2,7 @@ import React from "react";
 import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_ITEM } from "../../utils/actions";
 import { ADD_TO_CART } from "../../utils/actions";
+import "./style.css"
 
 
 
@@ -57,10 +58,10 @@ function OrderDisplay(props) {
             </div>
 
 
-            <div class="col-sm-6">
+            <div class="col-sm-4">
 
             <strong>{props.product.productName}</strong>
-            <button onClick={removeFromCart}>console</button>
+            
             
 
 
@@ -69,9 +70,18 @@ function OrderDisplay(props) {
             <div class="col-sm-3">
 
             <strong>{props.product.price}</strong>
-
+            
 
             </div>
+
+
+            <div class="col-sm-2">
+            
+            <button className="buttonmargin" onClick={removeFromCart}>x</button>
+
+            </div>
+
+            
 
 
             

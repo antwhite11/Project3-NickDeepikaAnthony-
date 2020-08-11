@@ -8,11 +8,11 @@ import { Link } from "react-router-dom"
 const orderSubmitted = () => {
     return (
 
-        <div>
+        <div className="landing-image">
 
         <div>Your order has been submitted. Thank You User.</div>
    
-       <Link to="/"><GoHomeButton /></Link>
+       <Link to="/"> <GoHomeButton /></Link>
         </div>
        
 
