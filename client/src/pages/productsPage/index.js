@@ -11,6 +11,7 @@ import Sort from "../../components/Sort"
 import MaterialIcon, { colorPalette } from 'material-icons-react';
 import { UPDATE_PRODUCTS } from "../../utils/actions";
 import { useStoreContext } from "../../utils/GlobalState";
+import "./style.css";
 
 
 const productsPage = () => {
@@ -65,16 +66,16 @@ const productsPage = () => {
   };
 
   return (
-    <Container fluid>
+    <Container fluid >
       <Row>
         <Col size="md-12">
-          <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a className="navbar-brand" href="#">Shopping</a>
-            <button className="navbar-toggler" type="button" data-toggle="collapse"
+          <nav className="navbar navbar-expand-lg navbar-custom">
+            <a className="navbar-brand">Shopping</a>
+            {/* <button className="navbar-toggler" type="button" data-toggle="collapse"
               data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
               aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
-            </button>
+            </button> */}
 
             <Sort onClick={() => sortbyPrice("DESC")}></Sort>
             <SearchForm
@@ -86,19 +87,17 @@ const productsPage = () => {
           </nav>
         </Col>
       </Row>
-
-      <div className="container">
+<div className="landing-image">
+      <div className="container" id="productlist">
         <div className="row" id="Products">
           <div className="project-area col-12 d-flex justify-content-center">
             <div className="card-columns">
-            {console.log("here")};
-              {console.log(state.products)};
               <ProductList products={state.products} />
             </div>
           </div>
         </div>
       </div>
-
+      </div>
 
     </Container>
   )
