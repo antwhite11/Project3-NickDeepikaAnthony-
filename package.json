@@ -31,6 +31,7 @@
     "react-router-dom": "^4.3.1",
     "react-shopping-cart": "^1.9.3",
     "redux": "^4.0.5",
-    "sequelize": "^4.41.2"
+    "sequelize": "^4.41.2",
+    "sequelize-cli": "^6.2.0"
   }
 }

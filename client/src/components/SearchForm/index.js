@@ -5,7 +5,7 @@ import "./style.css";
 function SearchForm(props) {
   return (
     <form className="search">
-      <div className="form-group">
+      
         <input
           value={props.search}
           onChange={props.handleInputChange}
@@ -16,7 +16,7 @@ function SearchForm(props) {
           placeholder="Search by Product"
           id="term"
         />
-      </div>
+      
     </form>
   );
 }

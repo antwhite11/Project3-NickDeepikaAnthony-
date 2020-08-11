@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART } from "../../utils/actions";
 
@@ -20,15 +21,15 @@ function Card(props) {
       
         <img className="card-img-top" src={props.product.imageURL} alt="Card image cap"></img>
         <div class="card-body"> 
-        </div>
-        <h5>
+        
+        <h4>
         {props.product.productName}
-        </h5>
-        <p><strong>Description:</strong> {props.product.description}</p>
+        </h4>
+        <p>{props.product.description}</p>
         <p><strong>Price:</strong> ${props.product.price}</p>
         <p><strong>Catogery:</strong> {props.product.catogery}</p>
-        <p><button className="material-icons" color='#212121' size='medium' onClick={addToCart}>add_shopping_cart </button></p>
-     
+        <p><button className="material-icons" color='#5de25d' size='medium' onClick={addToCart}>add_shopping_cart </button></p>
+        </div>
     </div>
 
 
