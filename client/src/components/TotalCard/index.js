@@ -1,20 +1,24 @@
 import React from "react"
+import { useStoreContext } from "../../utils/GlobalState"
 
 
 
 function TotalPrice (props){
+
+
+
+   const[state,dispatch]= useStoreContext();
    
     
-    var num1= 20
-    var num2 = 25
-    var add = function(){
+      let prices = state.cartProducts.map(product=> product.price)
 
-        var price= num1+num2
-        return price
+     
+      let priceTotal= prices.reduce((a, b) => a + b, 0)
 
 
-    }
 
+      
+  
 
     var totalStyle= {
 
@@ -39,7 +43,7 @@ function TotalPrice (props){
             <br/>
 
   
-            Total Price: ${add()}
+            Total Price: ${priceTotal}
 
             <br/>
             <br/>

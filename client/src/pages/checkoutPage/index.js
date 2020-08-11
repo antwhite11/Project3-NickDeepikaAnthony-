@@ -6,7 +6,7 @@ import ShippingCard from "../../components/ShippingCard/index"
 import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_ITEM } from "../../utils/actions";
 import CartList from "../../components/CartList"
-import API from "../../utils/API"
+
 import { Link } from "react-router-dom"
 
 
@@ -33,13 +33,13 @@ const checkOutpage = () => {
     <div>
     <header style={headerStyle}>Checkout!</header>
     {console.log("here")}
-    {console.log(state.cartProducts[1])}
+    {console.log(state.cartProducts)}
     {console.log("cart")}
     <CartList products={state.cartProducts} />
     <ShippingCard></ShippingCard>
 
     <TotalCard></TotalCard>
-    <CheckoutButton></CheckoutButton>
+    <Link to="/orderSubmitted"><CheckoutButton></CheckoutButton></Link>
     
     
     
