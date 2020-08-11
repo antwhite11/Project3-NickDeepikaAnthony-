@@ -25,7 +25,7 @@ function Card(props) {
         <h4>
         {props.product.productName}
         </h4>
-        <p><strong>Description:</strong> {props.product.description}</p>
+        <p>{props.product.description}</p>
         <p><strong>Price:</strong> ${props.product.price}</p>
         <p><strong>Catogery:</strong> {props.product.catogery}</p>
         <p><button className="material-icons" color='#5de25d' size='medium' onClick={addToCart}>add_shopping_cart </button></p>

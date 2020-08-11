@@ -89,7 +89,7 @@ const productsPage = () => {
       </Row>
 <div className="landing-image">
       <div className="container" id="productlist">
-        <div className="row" id="Products">
+        <div className="" id="Products">
           <div className="project-area col-12 d-flex justify-content-center">
             <div className="card-columns">
               <ProductList products={state.products} />
