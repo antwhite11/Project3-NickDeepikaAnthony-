@@ -1,4 +1,7 @@
 import React from "react";
+import API from "../utils/API"
+
+import {useHistory} from "react-router-dom"
 
 var buttonStyle = {
 
@@ -8,8 +11,20 @@ var buttonStyle = {
 
 
 
+ function CheckoutButton(props)  {
 
-function CheckoutButton (props) {
+  const getData= () =>  {
+
+    API.postOrders().then(res=>{
+
+        console.log(res.data)
+
+
+    })
+    
+    
+}
+ 
 
 
 
@@ -20,7 +35,7 @@ function CheckoutButton (props) {
 
 
 
-        <button>Place Order</button>
+        <button onClick={()=>getData()} >Place Order</button>
 
 
         </div>
@@ -36,6 +51,6 @@ function CheckoutButton (props) {
 
    </div>
   );
-}
 
+}
 export default CheckoutButton ;

@@ -5,12 +5,17 @@ import TotalCard from "../../components/TotalCard/index"
 import ShippingCard from "../../components/ShippingCard/index"
 import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_ITEM } from "../../utils/actions";
+import CartList from "../../components/CartList"
+import API from "../../utils/API"
+import { Link } from "react-router-dom"
 
 
 const checkOutpage = () => {
 
     const[state,dispatch]= useStoreContext();
     
+
+   
 
 
 
@@ -30,7 +35,7 @@ const checkOutpage = () => {
     {console.log("here")}
     {console.log(state.cartProducts[1])}
     {console.log("cart")}
-    <OrderDisplay products={state.cartProducts[1]} />
+    <CartList products={state.cartProducts} />
     <ShippingCard></ShippingCard>
 
     <TotalCard></TotalCard>

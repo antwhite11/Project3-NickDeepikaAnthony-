@@ -20,7 +20,7 @@ const reducer = (state, action) => {
     return {
       ...state,
       cartProducts: state.cartProducts.filter((product) => {
-        return product.productId !== action._id; 
+        return product.productId !== action.id; 
       })
     };
     case UPDATE_PRODUCTS:

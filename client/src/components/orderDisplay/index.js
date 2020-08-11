@@ -19,7 +19,7 @@ function OrderDisplay(props) {
 
  {dispatch({
     type: REMOVE_ITEM,
-    id: props.products.productId
+    id: props.product.productId
   })
 }}
 
@@ -49,7 +49,7 @@ function OrderDisplay(props) {
               
 
 
-            <img src={props.products.imageURL} alt="item pic" style={imageStyle}/>
+            <img src={props.product.imageURL} alt="item pic" style={imageStyle}/>
 
 
 
@@ -59,7 +59,7 @@ function OrderDisplay(props) {
 
             <div class="col-sm-6">
 
-            <strong>{props.products.productName}</strong>
+            <strong>{props.product.productName}</strong>
             <button onClick={removeFromCart}>console</button>
             
 
@@ -68,7 +68,7 @@ function OrderDisplay(props) {
 
             <div class="col-sm-3">
 
-            <strong>{props.products.price}</strong>
+            <strong>{props.product.price}</strong>
 
 
             </div>
