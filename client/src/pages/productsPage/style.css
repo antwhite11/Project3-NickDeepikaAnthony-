@@ -1,0 +1,29 @@
+.navbar-custom {
+    background-color: rgb(93, 226, 93);
+}
+
+.navbar-brand
+{
+font-family: 'Lato', sans-serif;
+  font-size: 45px;
+  /* margin: 0px; */
+}
+
+
+
+.landing-image {
+    background-image: url('../../images/86527010-shopping-background-seamless-pattern-with-line-art-icons-colorful-variant.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    height: 500vh;
+    width: 100%;
+    
+  }
+
+  #Products{
+    background-color: rgb(134, 109, 109, 0.8);
+    padding: 50px 40px;
+  }
+
+  
