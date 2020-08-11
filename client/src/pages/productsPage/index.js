@@ -83,6 +83,7 @@ const productsPage = () => {
               results={search}
             />
             <Link to="/cart"><MaterialIcon icon="shopping_cart" color='#212121' size='large' /></Link>
+          <h3>({state.cartProducts.length})</h3>
 
           </nav>
         </Col>
