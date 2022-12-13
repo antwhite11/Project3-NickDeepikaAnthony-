@@ -23,7 +23,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "material-icons-react": "^1.0.4",
     "mysql2": "^1.6.4",
     "react": "^16.13.1",
